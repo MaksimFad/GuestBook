@@ -44,7 +44,7 @@
 
 - (void)authorizeUser:(void(^)(User *user))completion {
     
-    LoginViewController *loginView =
+    LoginViewController *loginViewController =
     [[LoginViewController alloc] initWithCompetionBlock:^(AccessToken *token) {
         self.accessToken = token;
         
@@ -53,18 +53,11 @@
         }
     }];
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginView];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     
-    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *rootViewController = [[[[UIApplication sharedApplication] windows] firstObject] rootViewController];
     
-    [rootViewController presentViewController:navController
-                                     animated:YES
-                                   completion:nil];
-    
-    
-    
-    
-    
+    [rootViewController presentViewController:navController animated:YES completion:nil];
     
 }
 

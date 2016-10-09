@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"Login";
     [self createWebView];
     [self createBarButtonItem];
 }
@@ -55,7 +56,7 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                           target:self
                                                                           action:@selector(actionCancel:)];
-    item.title = @"Login";
+    
     
     [self.navigationItem setRightBarButtonItem:item animated:NO];
 }
@@ -68,7 +69,8 @@
         self.competionBlock(nil);
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
 }
 
 #pragma mark - UIWebViewDelegate
