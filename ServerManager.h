@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 
+
 @interface ServerManager : NSObject
 
 + (instancetype)sharedManager;
 
-- (void) autoriseUser:(void(^)(User* user))completion;
+- (void)authorizeUser:(void(^)(User *user))completion;
 
 @end

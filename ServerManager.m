@@ -9,6 +9,16 @@
 #import "ServerManager.h"
 #import <AFNetworking.h>
 
+#import "AccessToken.h"
+#import "LoginViewController.h"
+
+
+@interface ServerManager ()
+
+@property (strong, nonatomic) AccessToken *accessToken;
+
+@end
+
 @implementation ServerManager
 
 + (instancetype)sharedManager {
@@ -22,7 +32,42 @@
     return manager;
 }
 
-- (void) autoriseUser:(void(^)(User* user))completion {
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSURL * url = [NSURL URLWithString:@""];
+        
+    }
+    return self;
+}
+
+- (void)authorizeUser:(void(^)(User *user))completion {
+    
+    LoginViewController *loginView =
+    [[LoginViewController alloc] initWithCompetionBlock:^(AccessToken *token) {
+        self.accessToken = token;
+        
+        if (completion) {
+            completion(nil);
+        }
+    }];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginView];
+    
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    [rootViewController presentViewController:navController
+                                     animated:YES
+                                   completion:nil];
+    
+    
+    
+    
+    
     
 }
+
+
+
 @end

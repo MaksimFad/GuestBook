@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5093936EB18FAADEA6102E41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C317EEDCD8668A8F82EDE3 /* libPods.a */; };
+		F72B9F631DAAA62900BDB0D7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B9F621DAAA62900BDB0D7 /* LoginViewController.m */; };
+		F72B9F681DAAA66800BDB0D7 /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = F72B9F671DAAA66800BDB0D7 /* AccessToken.m */; };
+		F7C55E491DAAFA6800D4544E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C55E481DAAFA6800D4544E /* User.m */; };
 		F7F8A4991D7B56250002EE24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8A4981D7B56250002EE24 /* main.m */; };
 		F7F8A49C1D7B56250002EE24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8A49B1D7B56250002EE24 /* AppDelegate.m */; };
 		F7F8A49F1D7B56250002EE24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8A49E1D7B56250002EE24 /* ViewController.m */; };
@@ -32,6 +35,12 @@
 		6FEC397597F0524C1442B52F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7949A9E38EC4E55F55A7867D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		97C317EEDCD8668A8F82EDE3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B9F611DAAA62900BDB0D7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F72B9F621DAAA62900BDB0D7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F72B9F661DAAA66800BDB0D7 /* AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessToken.h; sourceTree = "<group>"; };
+		F72B9F671DAAA66800BDB0D7 /* AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessToken.m; sourceTree = "<group>"; };
+		F7C55E471DAAFA6800D4544E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F7C55E481DAAFA6800D4544E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F7F8A4941D7B56250002EE24 /* GuestBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuestBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F8A4981D7B56250002EE24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7F8A49A1D7B56250002EE24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +94,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F72B9F641DAAA62C00BDB0D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7F8A4BC1D7B59600002EE24 /* ServerManager.h */,
+				F7F8A4BD1D7B59600002EE24 /* ServerManager.m */,
+				F7C55E471DAAFA6800D4544E /* User.h */,
+				F7C55E481DAAFA6800D4544E /* User.m */,
+				F72B9F651DAAA64100BDB0D7 /* Login */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F72B9F651DAAA64100BDB0D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F72B9F661DAAA66800BDB0D7 /* AccessToken.h */,
+				F72B9F671DAAA66800BDB0D7 /* AccessToken.m */,
+				F72B9F611DAAA62900BDB0D7 /* LoginViewController.h */,
+				F72B9F621DAAA62900BDB0D7 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		F7F8A48B1D7B56250002EE24 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +140,7 @@
 		F7F8A4961D7B56250002EE24 /* GuestBook */ = {
 			isa = PBXGroup;
 			children = (
-				F7F8A4BC1D7B59600002EE24 /* ServerManager.h */,
-				F7F8A4BD1D7B59600002EE24 /* ServerManager.m */,
+				F72B9F641DAAA62C00BDB0D7 /* Model */,
 				F7F8A49A1D7B56250002EE24 /* AppDelegate.h */,
 				F7F8A49B1D7B56250002EE24 /* AppDelegate.m */,
 				F7F8A49D1D7B56250002EE24 /* ViewController.h */,
@@ -293,9 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F8A4BE1D7B59600002EE24 /* ServerManager.m in Sources */,
+				F7C55E491DAAFA6800D4544E /* User.m in Sources */,
 				F7F8A49F1D7B56250002EE24 /* ViewController.m in Sources */,
 				F7F8A49C1D7B56250002EE24 /* AppDelegate.m in Sources */,
 				F7F8A4991D7B56250002EE24 /* main.m in Sources */,
+				F72B9F631DAAA62900BDB0D7 /* LoginViewController.m in Sources */,
+				F72B9F681DAAA66800BDB0D7 /* AccessToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
